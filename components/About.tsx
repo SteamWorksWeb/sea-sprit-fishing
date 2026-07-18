@@ -9,7 +9,7 @@ export default function About() {
     >
       <div className="max-w-content mx-auto grid grid-cols-2 gap-[52px] items-center max-lg:grid-cols-1 max-lg:gap-8">
         {/* Image */}
-        <div className="relative border-2 border-ink overflow-hidden" style={{ aspectRatio: "5/4" }}>
+        <div className="relative border-2 border-ink overflow-hidden rounded-[7px]" style={{ aspectRatio: "5/4" }}>
           <Image
             src="/IMG_9574-scaled.webp"
             alt="The Sea Spirit 65ft boat at sunset at Ponce Inlet with the crew"
@@ -39,13 +39,13 @@ export default function About() {
               href="https://fareharbor.com/embeds/book/seaspiritfishing/items/126757/?full-items=yes&flow=139900"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-[9px] bg-navy text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-sea-deep transition-colors duration-150"
+              className="inline-flex items-center gap-[9px] bg-navy text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-sea-deep transition-colors duration-150 rounded-[7px]"
             >
               Book a Private Trip <ArrowRight size={17} />
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-[9px] bg-transparent text-ink font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-ink hover:bg-navy hover:text-white hover:border-navy transition-colors duration-150"
+              className="inline-flex items-center gap-[9px] bg-transparent text-ink font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-ink hover:bg-navy hover:text-white hover:border-navy transition-colors duration-150 rounded-[7px]"
             >
               View the Gallery
             </a>

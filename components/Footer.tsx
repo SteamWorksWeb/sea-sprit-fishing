@@ -12,39 +12,49 @@ function FacebookIcon() {
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={17} height={17}>
-      <rect x="3" y="3" width="18" height="18" rx="0" />
+      <rect x="3" y="3" width="18" height="18" rx="4" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
 
-const exploreLinks = [
-  { label: "Half-Day Charter", href: "#charters" },
-  { label: "Full-Day Charter", href: "#charters" },
-  { label: "Red Snapper Night Trip", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Gallery", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Contact", href: "mailto:fvseaspirit@gmail.com" },
-];
-
-// Simple Tripadvisor icon since it's not in Lucide
 function TripadvisorIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={17} height={17}>
-      <circle cx="7" cy="13" r="3.2" />
-      <circle cx="17" cy="13" r="3.2" />
-      <path d="M7 9.5c2.5-2 7.5-2 10 0" />
+      <circle cx="7" cy="13" r="3" />
+      <circle cx="17" cy="13" r="3" />
+      <path d="M7 9.8c2.4-2 7.6-2 10 0" strokeLinecap="round" />
+      <path d="M2 10s2-2 5-2" strokeLinecap="round" />
+      <path d="M22 10s-2-2-5-2" strokeLinecap="round" />
     </svg>
   );
 }
+
+const charterLinks = [
+  { label: "Fishing Charters Overview", href: "/fishing-charters" },
+  { label: "Half-Day Charters", href: "/half-day-fishing-charter" },
+  { label: "Full-Day Charters", href: "/full-day-fishing-charter" },
+];
+
+const exploreLinks = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Location & Directions", href: "/location" },
+  { label: "The Boat", href: "/the-boat" },
+  { label: "The Fish", href: "/the-fish" },
+  { label: "Ash Scattering", href: "/about-us#ash" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Legal Notice", href: "/legal-notice" },
+  { label: "Terms of Agreement", href: "/terms-of-agreement" },
+];
 
 export default function Footer() {
   return (
     <footer className="bg-navy text-white px-12 pt-[58px] pb-[34px] max-lg:px-8 max-lg:pt-[52px] max-lg:pb-[30px] max-sm:px-5 max-sm:pt-11 max-sm:pb-6">
       <div className="max-w-content mx-auto">
-        <div className="grid grid-cols-[1.4fr_1fr_1fr] gap-10 max-lg:grid-cols-2 max-lg:gap-8 max-sm:grid-cols-1 max-sm:gap-8">
+        <div className="grid grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 max-lg:grid-cols-2 max-lg:gap-8 max-sm:grid-cols-1 max-sm:gap-8">
           {/* Col 1 — Brand */}
           <div>
             <b className="text-[22px] font-extrabold tracking-[0.04em] uppercase block">
@@ -91,7 +101,7 @@ export default function Footer() {
 
           {/* Col 2 — Get in touch */}
           <div>
-            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[18px]">
+            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[28px]">
               Get in touch
             </h4>
             <a
@@ -127,9 +137,23 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Col 3 — Explore */}
+          {/* Col 3 — Charters + Explore */}
           <div>
-            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[18px]">
+            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[28px]">
+              Fishing Charters
+            </h4>
+            <div className="flex flex-col gap-[10px] mb-6">
+              {charterLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-[13.5px] text-white/82 hover:text-coral transition-colors duration-150"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[28px] mt-2">
               Explore
             </h4>
             <div className="flex flex-col gap-[10px]">
@@ -143,6 +167,25 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Col 4 — Book */}
+          <div>
+            <h4 className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-coral mb-[28px]">
+              Ready to fish?
+            </h4>
+            <p className="text-[13.5px] leading-[1.6] text-white/70 mb-6">
+              Book online with live availability. All ages welcome.
+              Reservations are required — we book up fast.
+            </p>
+            <a
+              href="https://fareharbor.com/embeds/book/seaspiritfishing/?full-items=yes&flow=1065391"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full justify-center"
+            >
+              Book Online <ArrowRight size={17} />
+            </a>
           </div>
         </div>
 
