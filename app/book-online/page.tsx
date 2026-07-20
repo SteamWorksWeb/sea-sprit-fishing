@@ -135,9 +135,11 @@ export default function BookOnlinePage() {
                   ))}
                 </div>
 
-                {/* CTA — Lightframe API intercepts this click */}
+                {/* Opens FareHarbor booking in new tab */}
                 <a
                   href={trip.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center justify-center gap-[9px] bg-coral text-white font-extrabold text-[15px] tracking-[0.01em] px-7 py-[17px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full"
                 >
                   Book {trip.name} <CalendarDays size={17} />
