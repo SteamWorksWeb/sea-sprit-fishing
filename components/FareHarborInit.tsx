@@ -2,29 +2,34 @@
 
 import { useEffect } from "react";
 
+const SHORTNAME = "seaspiritfishing";
+
 /**
- * Calls window.FH.autoLightframe() after mount so that FareHarbor's
- * Lightframe API intercepts booking links on Next.js SPA navigations.
- * The global Lightframe script in layout.tsx handles hard page loads;
- * this component handles client-side navigation.
+ * Re-calls FH.autoLightframe({ shortname }) on every Next.js client-side
+ * navigation so FareHarbor's Lightframe overlay intercepts booking link
+ * clicks correctly on a SPA. The global script in layout.tsx handles the
+ * initial hard-load; this handles subsequent in-app navigation.
  */
 export default function FareHarborInit() {
   useEffect(() => {
-    const init = () => {
+    const initLightframe = () => {
       if (typeof window !== "undefined" && (window as any).FH) {
-        (window as any).FH.autoLightframe();
+        (window as any).FH.autoLightframe({ shortname: SHORTNAME });
       }
     };
 
-    // If FH is already loaded (hard load), call immediately
-    init();
+    // If FH is already available (client-side nav after hard load)
+    initLightframe();
 
-    // If FH hasn't loaded yet (client nav), poll briefly
+    // Poll briefly in case the script hasn't fully executed yet
+    let attempts = 0;
     const interval = setInterval(() => {
       if (typeof window !== "undefined" && (window as any).FH) {
-        (window as any).FH.autoLightframe();
+        (window as any).FH.autoLightframe({ shortname: SHORTNAME });
         clearInterval(interval);
       }
+      attempts++;
+      if (attempts > 20) clearInterval(interval); // stop after 4 seconds
     }, 200);
 
     return () => clearInterval(interval);
