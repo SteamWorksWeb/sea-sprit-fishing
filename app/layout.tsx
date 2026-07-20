@@ -171,7 +171,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="font-archivo">{children}</body>
+      <body className="font-archivo">
+        {children}
+        {/* FareHarbor Lightframe API — required for booking widgets/overlays */}
+        <Script
+          id="fareharbor-lightframe"
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
