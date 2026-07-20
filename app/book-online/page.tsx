@@ -76,7 +76,10 @@ export default function BookOnlinePage() {
       </section>
 
       {/* Trip cards */}
-      <section className="px-12 py-16 max-lg:px-8 max-sm:px-5 max-sm:py-10 bg-[#f5f1eb]">
+      <section
+        data-fareharbor-lightframe
+        className="px-12 py-16 max-lg:px-8 max-sm:px-5 max-sm:py-10 bg-[#f5f1eb]"
+      >
         <div className="max-w-content mx-auto grid grid-cols-2 gap-8 max-lg:grid-cols-1">
           {trips.map((trip) => (
             <article
@@ -135,11 +138,9 @@ export default function BookOnlinePage() {
                   ))}
                 </div>
 
-                {/* Opens FareHarbor booking in new tab */}
+                {/* FareHarbor Lightframe link */}
                 <a
                   href={trip.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center justify-center gap-[9px] bg-coral text-white font-extrabold text-[15px] tracking-[0.01em] px-7 py-[17px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full"
                 >
                   Book {trip.name} <CalendarDays size={17} />
