@@ -3,7 +3,7 @@ import { CalendarDays, Star } from "lucide-react";
 
 export default function Hero() {
   return (
-    <header className="relative min-h-[600px] flex items-end overflow-hidden max-sm:min-h-[520px]">
+    <header className="relative flex items-end overflow-hidden min-h-[calc(100vh-182px)] max-sm:min-h-[520px]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
