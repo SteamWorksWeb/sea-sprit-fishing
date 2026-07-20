@@ -31,50 +31,62 @@ export const metadata: Metadata = {
 const halfDaySpecies = [
   {
     name: "Mangrove Snapper",
+    img: "/fish/fish_mangrove_snapper.png",
     notes: "One of the most abundant reef fish off the Volusia coast. Feisty fighters that are excellent table fare.",
   },
   {
     name: "Lane Snapper",
+    img: "/fish/fish_lane_snapper.png",
     notes: "A colorful, cooperative species that shows up in numbers on the nearshore reefs.",
   },
   {
     name: "Vermillion Snapper",
-    notes: "Also called 'beeliners' — they school tight and bite aggressively. Great for kids and new anglers.",
+    img: "/fish/fish_vermillion_snapper.png",
+    notes: "Also called \u2018beeliners\u2019 \u2014 they school tight and bite aggressively. Great for kids and new anglers.",
   },
   {
     name: "Gag Grouper",
+    img: "/fish/fish_gag_grouper.png",
     notes: "The most prized catch on any Florida reef trip. Hits hard, pulls hard, and tastes incredible.",
   },
   {
     name: "Black Grouper",
+    img: "/fish/fish_black_grouper.png",
     notes: "Less common inshore but shows up on ledges and rocky bottom. Big fish when they cooperate.",
   },
   {
     name: "Red Grouper",
-    notes: "Found on structured bottom throughout the year. One of Florida's most popular food fish.",
+    img: "/fish/fish_red_grouper.png",
+    notes: "Found on structured bottom throughout the year. One of Florida\u2019s most popular food fish.",
   },
   {
     name: "Triggerfish",
-    notes: "Notoriously hard to hook with their small mouths, but worth the effort — great eating.",
+    img: "/fish/fish_triggerfish.png",
+    notes: "Notoriously hard to hook with their small mouths, but worth the effort \u2014 great eating.",
   },
   {
     name: "Sea Bass",
+    img: "/fish/fish_sea_bass.png",
     notes: "Abundant on nearshore structure. A favorite for beginner anglers.",
   },
   {
     name: "Amberjack",
-    notes: "Powerful, relentless fighters. Amberjack will test any angler's endurance.",
+    img: "/fish/fish_amberjack.png",
+    notes: "Powerful, relentless fighters. Amberjack will test any angler\u2019s endurance.",
   },
   {
     name: "Cobia",
-    notes: "Seasonal. When they show up around structure, they're one of the most exciting catches offshore.",
+    img: "/fish/fish_cobia.png",
+    notes: "Seasonal. When they show up around structure, they\u2019re one of the most exciting catches offshore.",
   },
   {
     name: "King Mackerel",
-    notes: "Fast, silver missiles. Kings are a thrill on light tackle — and make great smoked fish.",
+    img: "/fish/fish_king_mackerel.png",
+    notes: "Fast, silver missiles. Kings are a thrill on light tackle \u2014 and make great smoked fish.",
   },
   {
     name: "Flounder",
+    img: "/fish/fish_flounder.png",
     notes: "Bottom-dwelling and delicious. A nice bonus catch when the bite is right.",
   },
 ];
@@ -82,50 +94,62 @@ const halfDaySpecies = [
 const fullDaySpecies = [
   {
     name: "Gag Grouper",
-    notes: "The top target on full-day trips — we reach the deeper ledges where the big gags live.",
+    img: "/fish/fish_gag_grouper.png",
+    notes: "The top target on full-day trips \u2014 we reach the deeper ledges where the big gags live.",
   },
   {
     name: "Red Snapper",
+    img: "/fish/fish_red_snapper.png",
     notes: "During open season, this is the most prized catch of the trip. Big, beautiful, and delicious.",
   },
   {
     name: "Amberjack",
+    img: "/fish/fish_amberjack.png",
     notes: "Trophy-sized AJs live on the deep wrecks. These fish will absolutely wear you out.",
   },
   {
     name: "Mahi-Mahi",
+    img: "/fish/fish_mahi_mahi.png",
     notes: "When the weed lines show up offshore, mahi are game. Some of the most colorful fish in the sea.",
   },
   {
     name: "Cobia",
+    img: "/fish/fish_cobia.png",
     notes: "Regularly caught around structure and buoys offshore. Big, aggressive, and delicious.",
   },
   {
     name: "Black Grouper",
+    img: "/fish/fish_black_grouper.png",
     notes: "Found on deeper, harder structure. A rare and rewarding catch.",
   },
   {
     name: "Red Grouper",
-    notes: "Abundant on the offshore wrecks — one of the tastiest fish in the Gulf Stream.",
+    img: "/fish/fish_red_grouper.png",
+    notes: "Abundant on the offshore wrecks \u2014 one of the tastiest fish in the Gulf Stream.",
   },
   {
     name: "King Mackerel",
-    notes: "Fast and relentless — kings frequently cruise the deeper offshore structure.",
+    img: "/fish/fish_king_mackerel.png",
+    notes: "Fast and relentless \u2014 kings frequently cruise the deeper offshore structure.",
   },
   {
     name: "Barracuda",
-    notes: "Toothy and fast — a thrilling strike on any light-tackle setup.",
+    img: "/fish/fish_barracuda.png",
+    notes: "Toothy and fast \u2014 a thrilling strike on any light-tackle setup.",
   },
   {
     name: "Shark",
+    img: "/fish/fish_shark.png",
     notes: "Various species frequent the offshore wrecks. Sandbar, spinner, and blacktip are most common.",
   },
   {
     name: "Triggerfish",
-    notes: "Notoriously bait-stealing structure fish — but worth targeting on the deeper wrecks.",
+    img: "/fish/fish_triggerfish.png",
+    notes: "Notoriously bait-stealing structure fish \u2014 but worth targeting on the deeper wrecks.",
   },
   {
     name: "Sea Bass",
+    img: "/fish/fish_sea_bass.png",
     notes: "A consistent bonus catch on the offshore ledges and wrecks.",
   },
 ];
@@ -204,14 +228,26 @@ export default function TheFishPage() {
             {halfDaySpecies.map((fish, i) => (
               <div
                 key={i}
-                className="bg-white border-2 border-ink p-6 rounded-[7px]"
+                className="bg-white border-2 border-ink rounded-[7px] overflow-hidden"
               >
-                <h3 className="text-[17px] font-extrabold text-navy">
-                  {fish.name}
-                </h3>
-                <p className="text-[13.5px] leading-[1.6] text-ink/70 mt-3">
-                  {fish.notes}
-                </p>
+                {/* Fish illustration */}
+                <div className="relative bg-[#f0f7f9] border-b-2 border-ink" style={{ aspectRatio: "2/1" }}>
+                  <Image
+                    src={fish.img}
+                    alt={`${fish.name} fish identification illustration`}
+                    fill
+                    className="object-contain p-3"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-[17px] font-extrabold text-navy">
+                    {fish.name}
+                  </h3>
+                  <p className="text-[13.5px] leading-[1.6] text-ink/70 mt-3">
+                    {fish.notes}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -245,14 +281,26 @@ export default function TheFishPage() {
             {fullDaySpecies.map((fish, i) => (
               <div
                 key={i}
-                className="bg-white border-2 border-ink p-6 rounded-[7px]"
+                className="bg-white border-2 border-ink rounded-[7px] overflow-hidden"
               >
-                <h3 className="text-[17px] font-extrabold text-navy">
-                  {fish.name}
-                </h3>
-                <p className="text-[13.5px] leading-[1.6] text-ink/70 mt-3">
-                  {fish.notes}
-                </p>
+                {/* Fish illustration */}
+                <div className="relative bg-[#f0f7f9] border-b-2 border-ink" style={{ aspectRatio: "2/1" }}>
+                  <Image
+                    src={fish.img}
+                    alt={`${fish.name} fish identification illustration`}
+                    fill
+                    className="object-contain p-3"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-[17px] font-extrabold text-navy">
+                    {fish.name}
+                  </h3>
+                  <p className="text-[13.5px] leading-[1.6] text-ink/70 mt-3">
+                    {fish.notes}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

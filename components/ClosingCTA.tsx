@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { CalendarDays, Phone } from "lucide-react";
 
 export default function ClosingCTA() {
   return (
@@ -24,7 +24,7 @@ export default function ClosingCTA() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-[9px] bg-white text-coral font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-white hover:bg-white/90 transition-colors duration-150 rounded-[7px]"
           >
-            Book Online Now <ArrowRight size={17} />
+            Book Online Now <CalendarDays size={17} />
           </a>
           <a
             href="tel:3867634388"

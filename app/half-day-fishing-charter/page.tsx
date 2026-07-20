@@ -68,7 +68,7 @@ export default function HalfDayPage() {
             style={{ aspectRatio: "4/3" }}
           >
             <Image
-              src="/IMG_4256.webp"
+              src="/images/kids-and-adult-striped-bass-boat-catch.jpg"
               alt="Half-day fishing charter on the Sea Spirit out of Ponce Inlet"
               fill
               priority

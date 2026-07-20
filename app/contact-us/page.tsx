@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, CalendarDays } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -135,7 +135,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
               >
-                Book Online <ArrowRight size={17} />
+                Book Online <CalendarDays size={17} />
               </a>
             </div>
           </div>

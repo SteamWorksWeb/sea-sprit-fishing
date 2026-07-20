@@ -2,7 +2,8 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
+import Image from "next/image";
+import { CalendarDays, Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 
 /* ─── Social icon SVGs ─────────────────────────────────────── */
 function FacebookIcon({ size = 15 }: { size?: number }) {
@@ -114,6 +115,7 @@ const navItems = [
   },
   { label: "The Fish", href: "/the-fish" },
   { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact-us" },
 ];
@@ -153,13 +155,15 @@ export default function Navbar() {
 
       <nav className="sticky top-0 z-20 flex items-center gap-[22px] px-12 py-[20px] border-b-2 border-ink bg-sand max-lg:px-8 max-sm:px-5">
         {/* Brand */}
-        <Link href="/" className="flex flex-col leading-none mr-auto no-underline text-ink">
-          <span className="text-[21px] font-extrabold tracking-[0.04em] uppercase">
-            Sea <span className="text-coral">Spirit</span>
-          </span>
-          <span className="text-[9.5px] font-bold tracking-[0.24em] uppercase text-sea-deep mt-[5px]">
-            Fishing Charters · Ponce Inlet
-          </span>
+        <Link href="/" className="mr-auto flex-none" aria-label="Sea Spirit Fishing — Home">
+          <Image
+            src="/images/logo2.png"
+            alt="Sea Spirit Fishing Charters — Ponce Inlet, FL"
+            width={160}
+            height={60}
+            className="h-[52px] w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
@@ -211,7 +215,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="hidden sm:inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
         >
-          Book Online <ArrowRight size={16} />
+          Book Online <CalendarDays size={16} />
         </a>
 
         {/* Mobile hamburger */}
@@ -275,7 +279,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-between bg-coral text-white font-extrabold text-[14px] px-6 py-[15px] hover:bg-coral-deep transition-colors duration-150"
               >
-                Book Online <ArrowRight size={17} />
+                Book Online <CalendarDays size={17} />
               </a>
               <div className="flex items-center justify-between pt-1">
                 <a

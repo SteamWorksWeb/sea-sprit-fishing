@@ -4,7 +4,9 @@ import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import ClosingCTA from "@/components/ClosingCTA";
 import Footer from "@/components/Footer";
-import FaqAccordion, { faqs } from "@/components/FaqAccordion";
+import FaqAccordion from "@/components/FaqAccordion";
+import { faqs } from "@/lib/faqData";
+
 
 export const metadata: Metadata = {
   title: "FAQ | Fishing Charter Questions Answered — Sea Spirit, Ponce Inlet FL",

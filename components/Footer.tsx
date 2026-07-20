@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { CalendarDays, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
 function FacebookIcon() {
   return (
@@ -57,12 +58,15 @@ export default function Footer() {
         <div className="grid grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 max-lg:grid-cols-2 max-lg:gap-8 max-sm:grid-cols-1 max-sm:gap-8">
           {/* Col 1 — Brand */}
           <div>
-            <b className="text-[22px] font-extrabold tracking-[0.04em] uppercase block">
-              Sea Spirit
-            </b>
-            <small className="text-[10px] font-bold tracking-[0.22em] uppercase text-white/60 block mt-[6px]">
-              Fishing Charters · Ponce Inlet, FL
-            </small>
+            <Link href="/" aria-label="Sea Spirit Fishing — Home" className="inline-block">
+              <Image
+                src="/images/logo2.png"
+                alt="Sea Spirit Fishing Charters — Ponce Inlet, FL"
+                width={180}
+                height={68}
+                className="h-[58px] w-auto object-contain"
+              />
+            </Link>
             <p className="text-[13.5px] leading-[1.6] text-white/70 mt-[18px] max-w-[34ch]">
               The Daytona coast&apos;s longest-running, #1-rated deep sea
               fishing charter. Family owned and operated.
@@ -184,7 +188,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full justify-center"
             >
-              Book Online <ArrowRight size={17} />
+              Book Online <CalendarDays size={17} />
             </a>
           </div>
         </div>

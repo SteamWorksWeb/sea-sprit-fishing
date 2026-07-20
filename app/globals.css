@@ -45,20 +45,23 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin: 0;
-}
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0;
+  }
 
-p { margin: 0; }
+  p { margin: 0; }
+  p + p { margin-top: 14px; }
 
-img { display: block; max-width: 100%; }
+  img { display: block; max-width: 100%; }
 
-a { text-decoration: none; }
+  a { text-decoration: none; }
 
-*:focus-visible {
-  outline: 2px solid #ff5630;
-  outline-offset: 2px;
+  *:focus-visible {
+    outline: 2px solid #ff5630;
+    outline-offset: 2px;
+  }
 }

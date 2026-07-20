@@ -12,8 +12,8 @@ const stats = [
     label: "The largest, steadiest boat out of the inlet",
   },
   {
-    number: "50",
-    label: "Anglers welcome aboard every trip",
+    number: "48–50",
+    label: "Anglers welcome aboard all trips",
   },
   {
     number: "All-in",

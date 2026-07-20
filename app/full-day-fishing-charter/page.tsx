@@ -61,7 +61,7 @@ export default function FullDayPage() {
             style={{ aspectRatio: "4/3" }}
           >
             <Image
-              src="/Half-Day-Fishing-Charter-image-4.webp"
+              src="/images/angler-holding-large-grouper-offshore.jpg"
               alt="Full-day deep sea fishing charter on the Sea Spirit — grouper on the deck"
               fill
               priority

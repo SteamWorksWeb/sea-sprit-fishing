@@ -66,7 +66,20 @@ export default function Reviews() {
             </div>
           ))}
         </div>
+
+        {/* TripAdvisor CTA */}
+        <div className="mt-9 flex justify-center">
+          <a
+            href="https://www.tripadvisor.com/Attraction_Review-g658215-d647105-Reviews-Sea_Spirit-Ponce_Inlet_Florida.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-[9px] bg-transparent text-ink font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-ink hover:bg-navy hover:text-white hover:border-navy transition-colors duration-150 rounded-[7px]"
+          >
+            Read More Reviews <Star size={16} fill="currentColor" />
+          </a>
+        </div>
       </div>
     </section>
+
   );
 }

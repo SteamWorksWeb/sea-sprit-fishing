@@ -7,29 +7,29 @@ import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "/IMG_0464.webp",
-    alt: "Fishing rods silhouetted against a glowing sunset at sea aboard the Sea Spirit",
+    src: "/images/group-holding-large-snapper-haul-boat.jpg",
+    alt: "Group of anglers holding a large haul of snapper on the Sea Spirit boat deck off Ponce Inlet, FL",
     span: "featured",
   },
   {
-    src: "/IMG_4167.webp",
-    alt: "Two anglers proudly holding a mangrove snapper caught on the Sea Spirit",
+    src: "/images/father-son-holding-red-snapper.jpg",
+    alt: "Father and son holding a red snapper together caught on the Sea Spirit half-day charter",
   },
   {
-    src: "/IMG_0321.webp",
-    alt: "Young angler cranking the reel hard offshore on the Sea Spirit",
+    src: "/images/kids-fishing-on-sea-spirit-charter.jpg",
+    alt: "Kids fishing and having fun on the Sea Spirit charter boat out of Ponce Inlet, FL",
   },
   {
-    src: "/IMG_4253.webp",
-    alt: "Crew member smiling over a massive deck haul of snapper and reef fish",
+    src: "/images/angler-holding-large-grouper-offshore.jpg",
+    alt: "Angler holding a large grouper caught offshore on the Sea Spirit deep sea fishing charter",
   },
   {
-    src: "/IMG_9977-scaled.webp",
-    alt: "Full cooler view of the day's catch — snapper, grouper and reef fish",
+    src: "/images/family-fishing-charter-daytona-beach.jpg",
+    alt: "Family together on a fishing charter trip out of Daytona Beach area at Ponce Inlet, FL",
   },
   {
-    src: "/IMG_9535-scaled.webp",
-    alt: "Guests on the Sea Spirit heading offshore through Ponce Inlet at sunrise",
+    src: "/images/sea-spirit-boat-fishing-offshore-volusia.jpg",
+    alt: "The Sea Spirit charter boat fishing offshore in the Atlantic Ocean off Volusia County, Florida",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function PhotoGallery() {
         {/* See More Photos button */}
         <div className="flex justify-center mt-8">
           <Link
-            href="#"
+            href="/gallery"
             className="inline-flex items-center gap-[9px] bg-transparent text-ink font-extrabold text-[14px] tracking-[0.01em] px-7 py-[15px] border-2 border-ink hover:bg-navy hover:text-white hover:border-navy transition-colors duration-150 rounded-[7px]"
           >
             See More Photos <ArrowRight size={17} />
