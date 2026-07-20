@@ -79,8 +79,6 @@ function TripCard({
 
         <a
           href={ctaHref}
-          target="_blank"
-          rel="noopener noreferrer"
           className={`w-full inline-flex items-center justify-between font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 transition-colors duration-150 rounded-[7px] ${
             ctaVariant === "primary"
               ? "bg-coral text-white border-transparent hover:bg-coral-deep"

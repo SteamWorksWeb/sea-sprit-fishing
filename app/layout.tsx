@@ -173,11 +173,17 @@ export default function RootLayout({
       </head>
       <body className="font-archivo">
         {children}
-        {/* FareHarbor Lightframe API — required for booking widgets/overlays */}
+        {/* FareHarbor Lightframe API — required for booking overlay */}
         <Script
           id="fareharbor-lightframe"
-          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes&shortname=seaspiritfishing"
           strategy="afterInteractive"
+          onReady={() => {
+            // Re-initialize on every client-side navigation in Next.js SPA
+            if (typeof window !== "undefined" && (window as any).FH) {
+              (window as any).FH.autoLightframe();
+            }
+          }}
         />
       </body>
     </html>

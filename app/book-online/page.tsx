@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FareHarborInit from "@/components/FareHarborInit";
 import { CalendarDays, Clock, Fish, Users, Star, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ const trips = [
 export default function BookOnlinePage() {
   return (
     <main>
+      <FareHarborInit />
       <Navbar />
 
       {/* Page header */}
