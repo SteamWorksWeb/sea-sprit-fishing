@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import Script from "next/script";
-import FareHarborScript from "@/components/FareHarborScript";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -175,7 +174,11 @@ export default function RootLayout({
       <body className="font-archivo">
         {children}
         {/* FareHarbor Lightframe API — required for booking overlay */}
-        <FareHarborScript />
+        <Script
+          id="fareharbor-lightframe"
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
