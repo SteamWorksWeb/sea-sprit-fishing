@@ -75,7 +75,7 @@ export default function GalleryGrid() {
             onClick={() => setLightboxIndex(i)}
             className="group relative border-2 border-ink overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-coral rounded-[7px]"
             style={{ aspectRatio: "4/3" }}
-            aria-label={`View photo: ${photo.caption}`}
+            aria-label={`View photo: ${photo.alt}`}
           >
             <Image
               src={photo.src}
@@ -84,11 +84,6 @@ export default function GalleryGrid() {
               className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             />
-            <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/60 transition-all duration-300 flex items-end">
-              <p className="text-white text-[13px] font-bold px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                {photo.caption}
-              </p>
-            </div>
           </button>
         ))}
       </div>
@@ -133,9 +128,7 @@ export default function GalleryGrid() {
               sizes="90vw"
               priority
             />
-            <p className="absolute bottom-0 left-0 right-0 text-center text-white text-[14px] font-bold py-3 bg-black/50">
-              {photos[lightboxIndex].caption}
-            </p>
+
           </div>
           <p className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/60 text-[12px]">
             {lightboxIndex + 1} / {photos.length}

@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/IMG_0463.webp"
-          alt="Anglers with a large red snapper offshore on the Sea Spirit"
+          src="/images/hero2.jpg"
+          alt="Sea Spirit fishing charter boat offshore out of Ponce Inlet, FL"
           fill
           priority
           className="object-cover object-center"
