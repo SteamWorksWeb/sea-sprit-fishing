@@ -157,7 +157,7 @@ export default function Navbar() {
         {/* Brand */}
         <Link href="/" className="mr-auto flex-none" aria-label="Sea Spirit Fishing — Home">
           <Image
-            src="/images/logo3.png"
+            src="/images/logo4.png"
             alt="Sea Spirit Fishing Charters — Ponce Inlet, FL"
             width={160}
             height={60}
