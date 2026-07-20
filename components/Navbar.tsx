@@ -157,11 +157,11 @@ export default function Navbar() {
         {/* Brand */}
         <Link href="/" className="mr-auto flex-none" aria-label="Sea Spirit Fishing — Home">
           <Image
-            src="/images/logo2.png"
+            src="/images/logo3.png"
             alt="Sea Spirit Fishing Charters — Ponce Inlet, FL"
             width={160}
             height={60}
-            className="h-[52px] w-auto object-contain"
+            className="h-[104px] w-auto object-contain"
             priority
           />
         </Link>

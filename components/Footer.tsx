@@ -60,11 +60,11 @@ export default function Footer() {
           <div>
             <Link href="/" aria-label="Sea Spirit Fishing — Home" className="inline-block">
               <Image
-                src="/images/logo2.png"
+                src="/images/logo3.png"
                 alt="Sea Spirit Fishing Charters — Ponce Inlet, FL"
                 width={180}
                 height={68}
-                className="h-[58px] w-auto object-contain"
+                className="h-[116px] w-auto object-contain"
               />
             </Link>
             <p className="text-[13.5px] leading-[1.6] text-white/70 mt-[18px] max-w-[34ch]">
