@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useState } from "react";
 import { CalendarDays, X } from "lucide-react";
 import type { FareHarborWindow } from "@/lib/fareharbor";
 
@@ -40,9 +40,7 @@ export default function FareHarborBookingLink({
     };
   }, [iframeHref]);
 
-  const openBooking = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-
+  const openBooking = () => {
     try {
       const fareHarbor = (window as FareHarborWindow).FH;
 
@@ -53,7 +51,7 @@ export default function FareHarborBookingLink({
           view: { item: itemId },
         });
 
-        if (opened !== false) {
+        if (opened === true) {
           return;
         }
       }
@@ -66,13 +64,22 @@ export default function FareHarborBookingLink({
 
   return (
     <>
-      <a
-        href={href}
+      <button
+        type="button"
         onClick={openBooking}
         className="mt-auto inline-flex items-center justify-center gap-[9px] bg-coral text-white font-extrabold text-[15px] tracking-[0.01em] px-7 py-[17px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full"
       >
         Book {tripName} <CalendarDays size={17} />
-      </a>
+      </button>
+
+      <noscript>
+        <a
+          href={href}
+          className="mt-3 inline-flex items-center justify-center gap-[9px] bg-coral text-white font-extrabold text-[15px] tracking-[0.01em] px-7 py-[17px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full"
+        >
+          Book {tripName} <CalendarDays size={17} />
+        </a>
+      </noscript>
 
       {iframeHref ? (
         <div
