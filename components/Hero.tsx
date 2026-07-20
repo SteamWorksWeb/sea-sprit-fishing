@@ -11,6 +11,8 @@ export default function Hero() {
           alt="Sea Spirit fishing charter boat offshore out of Ponce Inlet, FL"
           fill
           priority
+          fetchPriority="high"
+          quality={85}
           className="object-cover object-center"
           sizes="100vw"
         />
