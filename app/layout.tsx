@@ -12,7 +12,7 @@ const archivo = Archivo({
 
 const SITE_URL = "https://seaspiritfishing.com";
 const SITE_NAME = "Sea Spirit Fishing";
-const OG_IMAGE = `${SITE_URL}/og-image.png`;
+const OG_IMAGE = `${SITE_URL}/images/social.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -65,6 +65,20 @@ export const metadata: Metadata = {
       "Half-day and full-day deep sea fishing charters out of Ponce Inlet, FL. Book your trip today.",
     images: [OG_IMAGE],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 const localBusinessSchema = {
