@@ -105,7 +105,7 @@ export default function FaqPage() {
                   or book directly below.
                 </p>
                 <a
-                  href="https://fareharbor.com/embeds/book/seaspiritfishing/?full-items=yes&flow=1065391"
+                  href="/book-online"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-coral text-white font-extrabold text-[14px] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"

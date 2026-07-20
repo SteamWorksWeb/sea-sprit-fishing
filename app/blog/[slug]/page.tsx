@@ -211,9 +211,7 @@ export default async function BlogPostPage({
               Half-day and full-day charters departing from Ponce Inlet, FL. All gear included. All ages welcome.
             </p>
             <a
-              href="https://fareharbor.com/embeds/book/seaspiritfishing/?full-items=yes&flow=1065391"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book-online"
               className="inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-7 py-[15px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
             >
               Book Online <CalendarDays size={16} />

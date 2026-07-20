@@ -210,7 +210,7 @@ export default function Navbar() {
 
         {/* Book Online CTA */}
         <a
-          href="https://fareharbor.com/embeds/book/seaspiritfishing/items/126757/?full-items=yes&flow=139900"
+          href="/book-online"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden sm:inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
@@ -273,7 +273,7 @@ export default function Navbar() {
             {/* Mobile CTA + contact */}
             <div className="p-5 border-t-2 border-ink/15 space-y-3">
               <a
-                href="https://fareharbor.com/embeds/book/seaspiritfishing/items/126757/?full-items=yes&flow=139900"
+                href="/book-online"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}

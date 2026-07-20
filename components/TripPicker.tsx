@@ -121,7 +121,7 @@ export default function TripPicker() {
             ]}
             description="Minutes offshore and already on the reefs — snapper, seabass and triggerfish action. Morning (7am–12pm) or afternoon (1pm–6pm), most days of the week."
             ctaLabel="Book Half-Day"
-            ctaHref="https://fareharbor.com/embeds/book/seaspiritfishing/items/126757/?full-items=yes&flow=139900"
+            ctaHref="/book-online"
             ctaVariant="primary"
           />
 
@@ -137,7 +137,7 @@ export default function TripPicker() {
             ]}
             description="Run to the deeper wrecks and ledges for grouper, amberjack, cobia and mahi. The full offshore experience — Wednesdays & Saturdays, 7am–4pm."
             ctaLabel="Book Full-Day"
-            ctaHref="https://fareharbor.com/embeds/book/seaspiritfishing/items/126769/?full-items=yes&flow=139900"
+            ctaHref="/book-online"
             ctaVariant="primary"
           />
 
@@ -148,7 +148,7 @@ export default function TripPicker() {
             chips={[{ icon: <Gift size={14} />, label: "Any Amount" }]}
             description="Give someone the day they'll talk about for years. Choose any amount — redeemable on any charter, delivered instantly."
             ctaLabel="Buy a Gift Card"
-            ctaHref="https://fareharbor.com/embeds/book/seaspiritfishing/items/129709/?flow=139900"
+            ctaHref="/book-online"
             ctaVariant="line"
           />
         </div>
