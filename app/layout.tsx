@@ -10,18 +10,18 @@ const archivo = Archivo({
   display: "swap",
 });
 
-const SITE_URL = "https://seaspiritfishing.com";
+const SITE_URL = "https://sea-sprit-fishing.vercel.app";
 const SITE_NAME = "Sea Spirit Fishing";
 const OG_IMAGE = `${SITE_URL}/images/social.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet, Daytona Beach",
+    default: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet",
     template: "%s | Sea Spirit Fishing",
   },
   description:
-    "Half-day and full-day deep sea fishing charters out of Ponce Inlet, FL. The Daytona coast's largest boat, friendliest crew, and #1-rated fishing experience. Book your trip today.",
+    "Half & full-day deep sea fishing charters from Ponce Inlet, FL. The Daytona coast's largest boat, friendliest crew, #1 rated. Book today.",
   keywords: [
     "Sea Spirit Fishing",
     "Ponce Inlet fishing charter",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet, FL",
+    title: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet",
     description:
-      "Half-day and full-day deep sea fishing charters out of Ponce Inlet. The biggest boat, the friendliest crew, the best day out.",
+      "Half & full-day deep sea charters from Ponce Inlet, FL. The biggest boat, the friendliest crew, the best day on the water.",
     images: [
       {
         url: OG_IMAGE,
@@ -60,9 +60,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet, FL",
+    site: "@seaspiritfishing",
+    title: "Sea Spirit Fishing | #1 Rated Charter — Ponce Inlet",
     description:
-      "Half-day and full-day deep sea fishing charters out of Ponce Inlet, FL. Book your trip today.",
+      "Half & full-day deep sea charters from Ponce Inlet, FL. The biggest boat, friendliest crew, best day on the water.",
     images: [OG_IMAGE],
   },
   icons: {
