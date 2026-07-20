@@ -176,7 +176,7 @@ export default function RootLayout({
         {/* FareHarbor Lightframe API — required for booking overlay */}
         <Script
           id="fareharbor-lightframe"
-          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes&lightframe=always"
           strategy="afterInteractive"
         />
       </body>
