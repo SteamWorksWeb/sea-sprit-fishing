@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FareHarborInit from "@/components/FareHarborInit";
+import FareHarborBookingLink from "@/components/FareHarborBookingLink";
 import { CalendarDays, Clock, Fish, Users, Star, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -28,6 +28,7 @@ const trips = [
     description:
       "Our most popular trip. Fish 10–15 miles offshore for red snapper, grouper, mahi-mahi, and more. All gear, bait, and fishing license included.",
     fish: ["Red Snapper", "Grouper", "Mahi-Mahi", "Amberjack"],
+    itemId: 126757,
     href: "https://fareharbor.com/embeds/book/seaspiritfishing/items/126757/?full-items=yes&flow=139900",
   },
   {
@@ -41,6 +42,7 @@ const trips = [
     description:
       "Go 20–30 miles offshore for bigger fish and deeper water action. The full-day trip is for serious anglers who want the best shot at trophy fish.",
     fish: ["Scamp Grouper", "Red Snapper", "Tilefish", "Wahoo"],
+    itemId: 126769,
     href: "https://fareharbor.com/embeds/book/seaspiritfishing/items/126769/?full-items=yes&flow=139900",
   },
 ];
@@ -48,7 +50,6 @@ const trips = [
 export default function BookOnlinePage() {
   return (
     <main>
-      <FareHarborInit />
       <Navbar />
 
       {/* Page header */}
@@ -76,10 +77,7 @@ export default function BookOnlinePage() {
       </section>
 
       {/* Trip cards */}
-      <section
-        data-fareharbor-lightframe
-        className="px-12 py-16 max-lg:px-8 max-sm:px-5 max-sm:py-10 bg-[#f5f1eb]"
-      >
+      <section className="px-12 py-16 max-lg:px-8 max-sm:px-5 max-sm:py-10 bg-[#f5f1eb]">
         <div className="max-w-content mx-auto grid grid-cols-2 gap-8 max-lg:grid-cols-1">
           {trips.map((trip) => (
             <article
@@ -138,13 +136,11 @@ export default function BookOnlinePage() {
                   ))}
                 </div>
 
-                {/* FareHarbor Lightframe link */}
-                <a
+                <FareHarborBookingLink
                   href={trip.href}
-                  className="mt-auto inline-flex items-center justify-center gap-[9px] bg-coral text-white font-extrabold text-[15px] tracking-[0.01em] px-7 py-[17px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px] w-full"
-                >
-                  Book {trip.name} <CalendarDays size={17} />
-                </a>
+                  itemId={trip.itemId}
+                  tripName={trip.name}
+                />
               </div>
             </article>
           ))}

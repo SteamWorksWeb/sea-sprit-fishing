@@ -15,7 +15,7 @@ export default function FareHarborScript() {
       window.dispatchEvent(new Event(FAREHARBOR_READY_EVENT));
     };
 
-    if (typeof (window as FareHarborWindow).FH?.autoLightframe === "function") {
+    if (typeof (window as FareHarborWindow).FH?.open === "function") {
       notifyReady();
       return;
     }
