@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FareHarborWidget from "@/components/FareHarborWidget";
 import { CalendarDays, Phone, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -61,12 +61,7 @@ export default function BookOnlinePage() {
       {/* FareHarbor embed */}
       <section className="px-12 py-14 max-lg:px-8 max-sm:px-5 max-sm:py-10">
         <div className="max-w-content mx-auto">
-          <div id="fareharbor-booking" className="min-h-[500px]">
-            <Script
-              src="https://fareharbor.com/embeds/script/items/seaspiritfishing/?full-items=yes&flow=139900&fallback=simple"
-              strategy="afterInteractive"
-            />
-          </div>
+          <FareHarborWidget />
         </div>
       </section>
 
