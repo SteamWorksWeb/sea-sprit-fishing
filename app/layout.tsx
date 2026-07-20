@@ -176,11 +176,12 @@ export default function RootLayout({
         {/* FareHarbor Lightframe API — required for booking overlay */}
         <Script
           id="fareharbor-lightframe"
-          src="https://fareharbor.com/embeds/api/v1/"
+          src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"
           strategy="afterInteractive"
           onReady={() => {
+            // Re-scan DOM after Next.js SPA navigation
             if (typeof window !== "undefined" && (window as any).FH) {
-              (window as any).FH.autoLightframe({ shortname: "seaspiritfishing" });
+              (window as any).FH.autoLightframe();
             }
           }}
         />
