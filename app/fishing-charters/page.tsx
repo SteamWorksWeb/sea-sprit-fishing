@@ -247,8 +247,7 @@ export default function FishingChartersPage() {
             </div>
             <a
               href="/book-online"
-              target="_blank"
-              rel="noopener noreferrer"
+              
               className="mt-8 inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
             >
               Book Online Now <CalendarDays size={17} />

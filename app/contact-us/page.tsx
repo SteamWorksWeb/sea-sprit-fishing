@@ -131,8 +131,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="/book-online"
-                target="_blank"
-                rel="noopener noreferrer"
+                
                 className="mt-4 inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
               >
                 Book Online <CalendarDays size={17} />

@@ -211,8 +211,7 @@ export default function Navbar() {
         {/* Book Online CTA */}
         <a
           href="/book-online"
-          target="_blank"
-          rel="noopener noreferrer"
+          
           className="hidden sm:inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
         >
           Book Online <CalendarDays size={16} />
@@ -274,8 +273,7 @@ export default function Navbar() {
             <div className="p-5 border-t-2 border-ink/15 space-y-3">
               <a
                 href="/book-online"
-                target="_blank"
-                rel="noopener noreferrer"
+                
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-between bg-coral text-white font-extrabold text-[14px] px-6 py-[15px] hover:bg-coral-deep transition-colors duration-150"
               >

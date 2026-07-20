@@ -106,8 +106,7 @@ export default function FaqPage() {
                 </p>
                 <a
                   href="/book-online"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  
                   className="block text-center bg-coral text-white font-extrabold text-[14px] px-6 py-[14px] hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
                 >
                   Book Online

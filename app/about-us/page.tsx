@@ -108,8 +108,7 @@ export default function AboutPage() {
             <div className="flex gap-3 flex-wrap mt-[28px]">
               <a
                 href="/book-online"
-                target="_blank"
-                rel="noopener noreferrer"
+                
                 className="inline-flex items-center gap-[9px] bg-coral text-white font-extrabold text-[14px] tracking-[0.01em] px-6 py-[15px] border-2 border-transparent hover:bg-coral-deep transition-colors duration-150 rounded-[7px]"
               >
                 Book a Trip <CalendarDays size={17} />
